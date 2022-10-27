@@ -1,0 +1,26 @@
+﻿@{ 
+    //string name = ViewBag.Name;
+    List<string> list = ViewBag.Students;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    @foreach (string item in list)
+    {
+        <h1 style="background-color:@(item.Length > 5 ? "red":"green")" >@item</h1>
+    }
+
+    @*<p>@name @ViewData["SurName"]</p>
+
+    <p>@ViewData["Name"]</p>
+    <p>@ViewBag.SurName</p>
+
+    <p>@ViewData["name"]</p>
+    <p>@ViewBag.surName</p>
+    <p>@TempData["age"]</p>*@
+</body>
+</html>
